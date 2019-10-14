@@ -1,11 +1,10 @@
-import Comparator from "../../typings/Comparator";
 import less from "../../utils/comparators/Less";
 
 const quicksortImpl = <T>(
   array: T[],
   start: number,
   end: number,
-  comparator: Comparator
+  comparator: (a: T, b: T) => boolean
 ): void => {
   if (start >= end) {
     return;
@@ -25,7 +24,10 @@ const quicksortImpl = <T>(
   quicksortImpl(array, pivotIndex + 1, end, comparator);
 };
 
-const quicksort = <T>(array: T[], comparator: Comparator = less): void => {
+const quicksort = <T>(
+  array: T[],
+  comparator: (a: T, b: T) => boolean = less
+): void => {
   quicksortImpl(array, 0, array.length - 1, comparator);
 };
 
