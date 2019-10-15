@@ -1,4 +1,4 @@
-import quicksort from "../quicksort/Quicksort";
+import quicksort from "./quicksort";
 
 const bucketsort = (array: number[], bucketSize: number = 5): number[] => {
   const max: number = Math.max(...array);
