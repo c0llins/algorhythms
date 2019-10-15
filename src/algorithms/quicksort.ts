@@ -1,4 +1,4 @@
-import less from "../../utils/comparators/Less";
+import less from "../utils/comparators/Less";
 
 const quicksortImpl = <T>(
   array: T[],
