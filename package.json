@@ -4,31 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "node_modules/.bin/jest --forceExit --detectOpenHandles --testTimeout=10000",
+    "test": "node_modules/.bin/ts-mocha --recursive test/**/*.spec.ts",
     "cov": "node_modules/.bin/jest --coverage",
     "start": "node_modules/.bin/ts-node src/main"
   },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "ts"
-    ],
-    "rootDir": ".",
-    "testEnvironment": "node",
-    "testRegex": ".spec.ts$",
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-    },
-    "coverageDirectory": "./coverage",
-    "coveragePathIgnorePatterns": [
-      "/node_modules/"
-    ]
-  },
   "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.1.0",
+    "@types/chai": "^4.2.3",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1",
+    "ts-mocha": "^6.0.0",
     "ts-node": "^8.4.1",
     "tslint": "^5.20.0",
     "typescript": "^3.6.4"
