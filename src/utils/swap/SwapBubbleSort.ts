@@ -1,4 +1,4 @@
-const swapBSort = <T>(array: T[], i: let, j: let) => {
+const swapBSort = <T>(array: T[], i: number, j: number) => {
   if (array[j] > array[j + 1]) {
     let swap = array[j];
     array[j] = array[j + 1];
